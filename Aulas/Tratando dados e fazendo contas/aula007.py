@@ -79,9 +79,10 @@
 #
 # area = altura * largura
 #
-# litros = int(area / 2)
+# litros = float(area / 2)
 #
-# print(f"Serão necessários {litros} litros de tinta para pintar uma áres de {area}m²")
+# print(f"Sua parede tem a dimensão de {altura}x{largura} e sua área é de {area}m²."
+#       f"Serão necessários {litros:.3f} litros de tinta para pintá-la.")
 
 #Algoritimo que leia preço de um produto e mostre seu novo preço, com 5% de desconto
 
@@ -91,7 +92,7 @@
 #
 # total = preco - desconto
 #
-# print(f"Valor total com desconto: {total}")
+# print(f"Valor total com desconto: {total:.2f}")
 
 #Algoritmo que leia o salário de um funcionário e mostre o novo salário com 15% de aumento
 
@@ -102,5 +103,14 @@
 # total = salario + aumento
 #
 # print(f"Parabéns você teve um aumento de 15%, este é o seu novo salário R$ {total:.2f}")
+#
+#Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e
+# a quantidade de dias pelos quais ele foi alugado.
+# Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por Km rodado.
 
+dias = int(input("Informe a quantidade de dias: "))
+km = float(input("Informe quantos quilômetoros percorridos: "))
 
+valorT = float((60 * dias) + (0.15 * km))
+
+print(f"Pelos {km}Km percorridos e pelo(s) {dias} alugado(s), seu valor ficou em R${valorT}")

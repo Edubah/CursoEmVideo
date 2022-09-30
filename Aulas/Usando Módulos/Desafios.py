@@ -118,6 +118,17 @@ import time
 
 # Faça um programa que leia números de 0 a 9999 e mostre na tela cada um dos dígitos separados
 
+# numero = int(input('Informe um número: '))
+# u = numero // 1 % 10
+# d = numero // 10 % 10
+# c = numero // 100 % 10
+# m = numero // 1000 % 10
+#
+# print('Unidade: {}'.format(u))
+# print('Dezena: {}'.format(d))
+# print('Centena: {}'.format(c))
+# print('Milhar: {}'.format(m))
+
 # Ex:
 # Digite um número: 1834
 #
@@ -130,24 +141,136 @@ import time
 
 # Crie um sistema que leia o nome de uma cidade e diga se ela começa ou não com a palavra SANTO.
 
+# cid = str(input('Informe a cidade: ')).strip().upper()
+# print('Sua cidade inicia por SANTO? {}'.format(cid[:5] == 'SANTO'))
+
 #___________________________________________________________________________________________________#
 
 #Crie um programa que leia um nome e diga se a pessoa tem SILVA no nome
 
+# nome = str(input('Informe seu nome: ')).strip().upper()
+# print('Você tem silva no nome? {}'.format('SILVA' in nome))
 #___________________________________________________________________________________________________#
 
 # Crie um programa que leia uma frase e mostre:
 
+# frase = str(input('Digite uma frase: ')).upper().strip()
 # Quantas vezes aparece a letra A;
-#
+# print('A letra A aparece {} vezes.'.format(frase.count('A')))
 # Em que posição ela aparece a primeira vez;
-#
+# print('A letra A aparece pela primeira na {}ª posição.'.format(frase.find('A') + 1))
 # Em que posição ela aparece a última vez;
-
+# print('A letra A aparece pela última vez na {}ª posição.'.format(frase.rfind('A') +1))
 #___________________________________________________________________________________________________#
 
-#Faça um program que leia o nome de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente
+#Faça um programa que leia o nome de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente
 
+# nome = str(input('Informe seu nome: ')).strip().split()
+# print('Primeiro nome {}'.format(nome[0]))
+# print('Último nome: {}'.format(nome[len(nome) -1]))
 # Ex: Ana Maria de Souza
 # Primeiro nome: Ana
 # Último nome: Souza
+
+#___________________________________________________________________________________________________#
+
+#Escreva um programa que faça o computador 'pensar' entre um número inteiro de 0 a 5 e peça para o usuário
+#descobrir qual número foi escolhido pelo computador
+# lista_numero = [0, 1, 2, 3, 4, 5]
+# pc = random.choice(lista_numero)
+#
+# usuario_escolha = int(input('Advinhe o número que escolhi: '))
+#
+# if pc == usuario_escolha:
+#     print('Parabêns você acertou!!!')
+# else:
+#     print('Infelizmente você errou!!!')
+#OBS. O programa deverá escrever na tela se o usuário venceu ou perdeu!
+
+
+#___________________________________________________________________________________________________#
+
+#Escreva um programa que leia a velocidade de um carro, se ele ultrapassar 80km/h mostre uma mensagem que ele
+#foi multado. A multa custa R$7,00 por cada km acima do limite.
+# velocidade = float(input("Digite a velocidade do seu carro:"))
+# if velocidade > 80:
+#     multa = (velocidade - 80) * 7
+#     print(f"Você foi multado em R$ {multa:7.2f}!")
+# if velocidade <= 80:
+#     print("Sua velocidade está ok, boa viagem!")
+#___________________________________________________________________________________________________#
+
+#Crie um programa que leia um número inteiro qualquer e mostre na tela se ele é par ou ímpar
+
+# n = int(input('Insira um número: '))
+# if n % 2 == 0:
+#     print(f'{n} é par')
+# else:
+#     print(f'{n} é ímpar')
+#___________________________________________________________________________________________________#
+
+#Desenvolva um programa que pergunte a distância de uma viagem em km. Calcule o preço da passagem, cobrando
+#R$0.50 por km para viagens de até 200km e R$0.45 para viagens mais longes.
+
+# km = int(input('Informe a distância em KM: '))
+#
+# if km <= 200:
+#     valor = km * 0.50
+#     print(f'O valor da sua viagem ficou em R${valor:.2f}')
+# else:
+#     valor = km * 0.45
+#     print(f'O valor da sua viagem ficou em R${valor:.2f}')
+#___________________________________________________________________________________________________#
+
+
+#Faça um programa que leie um ano qualquer e informe se é bissexto.
+
+
+# ano = int(input('Insira o ano: '))
+#
+# if ano % 4 == 0 and ano % 100 == 0 and ano % 400 == 0:
+#     print(f'{ano}, é Bissexto!')
+# elif ano % 4 == 0 and ano % 100 != 0:
+#     print(f'{ano}, é Bissexto!')
+# else:
+#     print(f'{ano}, não é Bissexto!')
+
+
+#___________________________________________________________________________________________________#
+
+
+#Faça um programa que leia qualquer número e informe qual o maior e qual o menor.
+
+# n1 = int(input('informe o número: '))
+# n2 = int(input('Informe outro número: '))
+#
+# if n1 > n2:
+#     print(f'{n1} é maior que {n2}')
+# else:
+#     print(f'{n2} é maior que {n1}')
+
+#___________________________________________________________________________________________________#
+
+#Escreva um programa que pergunte o salário de um funcionário e calcule o valor de seu aumento.
+
+# sal = float(input('Fala o teu salário para o papai dar um aumento: '))
+
+#Para inferiores ou iguais o aumento é de 15%.
+# if sal <= 1.250:
+#     sal = sal + (sal * 0.15)
+#     print(f'{sal} este é o seu novo salário com aumento de 15%')
+#Para salários superiores a R$1.250,00 calcule um aumento de 10%.
+# elif sal > 1.250:
+#     sal = sal + (sal * 0.1)
+#     print(f'{sal} este é o seu novo salário com aumento de 10%')
+
+
+#___________________________________________________________________________________________________#
+
+
+#Desenvolva um programa que leia o comprimento de 3 retas e diga ao usuário se ela podem ou não formar um triãngulo.
+
+reta1 = float(input('Informe o comprimento da 1ª reta: '))
+reta2 = float(input('Informe o comprimento da 2ª reta: '))
+reta3 = float(input('Informe o comprimento da 3ª reta: '))
+

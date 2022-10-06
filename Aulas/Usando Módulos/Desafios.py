@@ -1,3 +1,5 @@
+from datetime import  date
+from time import sleep
 import math
 import random
 import time
@@ -187,6 +189,20 @@ import time
 #     print('Infelizmente você errou!!!')
 #OBS. O programa deverá escrever na tela se o usuário venceu ou perdeu!
 
+#Outra forma de fazer:
+
+# pc = random.randint(0, 5)
+# print('-=-' * 20)
+# print('Vou pensar em um número entre 0 e 5. Tente advinhar...')
+# print('-=-' * 20)
+# jogador = int(input('Em qual número pensei? '))
+# print('PROCESSANDO...')
+# sleep(3)
+# if jogador == pc:
+#     print('Parabéns você acertou!!')
+# else:
+#     print('Você errou, eu pensei no número {} e não no {}'.format(pc, jogador))
+
 
 #___________________________________________________________________________________________________#
 
@@ -198,6 +214,14 @@ import time
 #     print(f"Você foi multado em R$ {multa:7.2f}!")
 # if velocidade <= 80:
 #     print("Sua velocidade está ok, boa viagem!")
+
+#Outra forma de fazer:
+# velocidade = float(input('Qual a velocidade atual do carro? '))
+# if velocidade > 80:
+#     print('Você foi multado! Você excedeu o limite de velocidade de 80km/h')
+#     multa = (velocidade - 80) * 7
+#     print('Você deve pagar uma multa de R${:.2f}'.format(multa))
+# print('Tenha um bom dia! Dirija com segurança!')
 #___________________________________________________________________________________________________#
 
 #Crie um programa que leia um número inteiro qualquer e mostre na tela se ele é par ou ímpar
@@ -207,6 +231,8 @@ import time
 #     print(f'{n} é par')
 # else:
 #     print(f'{n} é ímpar')
+
+
 #___________________________________________________________________________________________________#
 
 #Desenvolva um programa que pergunte a distância de uma viagem em km. Calcule o preço da passagem, cobrando
@@ -220,6 +246,9 @@ import time
 # else:
 #     valor = km * 0.45
 #     print(f'O valor da sua viagem ficou em R${valor:.2f}')
+
+#Outra forma de fazer:
+# valor = km * 0.50 if km <=200 else km * 0.45
 #___________________________________________________________________________________________________#
 
 
@@ -227,13 +256,13 @@ import time
 
 
 # ano = int(input('Insira o ano: '))
-#
-# if ano % 4 == 0 and ano % 100 == 0 and ano % 400 == 0:
-#     print(f'{ano}, é Bissexto!')
-# elif ano % 4 == 0 and ano % 100 != 0:
-#     print(f'{ano}, é Bissexto!')
+# if ano == 0:
+#     ano = date.today().year
+# if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+#     print(f'O ano {ano}, é Bissexto!')
 # else:
-#     print(f'{ano}, não é Bissexto!')
+#     print(f'O ano {ano}, não é Bissexto!')
+
 
 
 #___________________________________________________________________________________________________#
@@ -270,7 +299,16 @@ import time
 
 #Desenvolva um programa que leia o comprimento de 3 retas e diga ao usuário se ela podem ou não formar um triãngulo.
 
-reta1 = float(input('Informe o comprimento da 1ª reta: '))
-reta2 = float(input('Informe o comprimento da 2ª reta: '))
-reta3 = float(input('Informe o comprimento da 3ª reta: '))
-
+# a = float(input('Informe o comprimento da 1ª reta: '))
+# b = float(input('Informe o comprimento da 2ª reta: '))
+# c = float(input('Informe o comprimento da 3ª reta: '))
+#
+# calc1 = (b - c) < a < (b + c)
+# calc2 = (a - c) < b < (a + c)
+# calc3 = (a - b) < c < (a + b)
+#
+#
+# if calc1 == True and calc2 == True and calc3 == True:
+#     print('É possível formar um trinângulo.')
+# else:
+#     print('Não é possível formar um triângulo.')
